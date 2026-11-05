@@ -1,0 +1,34 @@
+# ── Entorno de Python ──────────────────────────
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# ── Databricks ─────────────────────────────────
+.databricks/
+.bundle/
+
+# ── Credenciales y secretos (nunca a GitHub) ───
+.databrickscfg
+.env
+.env.*
+*.pem
+*.key
+secrets/
+
+# ── Jupyter ────────────────────────────────────
+.ipynb_checkpoints/
+
+# ── VS Code (ajustes personales del editor) ────
+.vscode/
+
+# ── Datos pesados o descargados ────────────────
+datos-locales/
+*.parquet
+*.zip
+
+# ── Sistema operativo ──────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini

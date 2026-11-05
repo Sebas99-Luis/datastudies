@@ -1,0 +1,19 @@
+# This is a Declarative Automation Bundle definition for datastudies.
+# The Databricks extension requires databricks.yml configuration file.
+# See https://docs.databricks.com/dev-tools/bundles/index.html for documentation.
+
+bundle:
+  name: datastudies
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: https://dbc-53df7378-c643.cloud.databricks.com
+
+  ## Optionally, there could be 'staging' or 'prod' targets here.
+  #
+  # prod:
+  #   workspace:
+  #     host: https://dbc-53df7378-c643.cloud.databricks.com
