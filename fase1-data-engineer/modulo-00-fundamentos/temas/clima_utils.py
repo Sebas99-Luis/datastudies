@@ -69,3 +69,19 @@ def resumen_estaciones(respuesta: list[dict]) -> dict[str, dict]:
     return {
         estacion["station"]["name"]: minima_estacion(estacion) for estacion in respuesta
     }
+
+
+def validar_lectura(lectura: dict) -> float:
+    """Devuelve la temperatura como float.
+    Lanza ValueError si está vacía, no es un número o
+    está fuera de -60 a 45."""
+
+    valor = lectura["value"].strip().replace(",", ".")
+    if valor == "":
+        raise ValueError("Valor vacío")
+
+    valor_float = float(valor)
+    if valor_float < -60 or valor_float > 45:
+        raise ValueError(f"Temperatura imposible: {valor_float}")
+
+    return valor_float
