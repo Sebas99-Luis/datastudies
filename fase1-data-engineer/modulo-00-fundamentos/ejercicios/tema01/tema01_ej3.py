@@ -1,10 +1,10 @@
 # Ejercicio 3: minimo por estacion
-# Archivo temas/clima_utils.py
+# Archivo utils/clima_utils.py
 # Practica: todo el tema
 import json
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
-from temas.clima_utils import parsear_temp_segura, minima_estacion, resumen_estaciones
+from utils.clima_utils import parsear_temp_segura, minima_estacion, resumen_estaciones
 
 """Una empresa de energia de Suecia ajusta su produccion de calefaccion
 urbana segun el frio.

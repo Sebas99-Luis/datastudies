@@ -146,7 +146,7 @@ buenas_malmo = [m for m in respuesta_malmo["value"] if m["quality"] == "G"]
 def parsear_temp(texto: str) -> float:
     """Convierte una temp en texto ("2,75", "-3.2") a float"""
     limpio = texto.strip().replace(",", ".")
-    return float()
+    return float(limpio)
 
 
 print(parsear_temp(" 2,75"))  # 2.75
@@ -233,7 +233,7 @@ from datetime import datetime, timezone  # importa solo lo que necesitas
 import statistics as st  # con alisas (nombre corto)
 
 # llamar funcion desde mis archivos
-from clima_utils import temps_validas_seguras
+from utils.clima_utils import temps_validas_seguras
 
 # json: texto JSON(lo que llega de una API) -> dict de Python
 texto_api = '{"station": {"name": "Lund"}, "value": [{"value": "4.2"}]}'

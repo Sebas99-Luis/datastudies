@@ -7,7 +7,7 @@
 import json
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
-from temas.clima_utils import validar_lectura
+from utils.clima_utils import validar_lectura
 
 texto_api = """[
  {"station": {"name": "Östersund"},
