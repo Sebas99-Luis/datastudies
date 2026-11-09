@@ -43,12 +43,12 @@
 
 """Predicciones:"""
 
-from databricks.connect import DatabricksSession
 import pandas as pd
+from utils.spark_session import get_spark
 
 #  --- Preparar ---
 
-spark = DatabricksSession.builder.serverless().getOrCreate()
+spark = get_spark()
 
 pdf = pd.read_csv(
     "temas/tema02/datos/lluvia_vg.csv",
@@ -56,8 +56,7 @@ pdf = pd.read_csv(
     decimal=",",
 )
 
-df = spark.createDataFrame(pdf)
-
+df = spark.createDataFrame(pdf)  # 2. enviar los datos a Spark
 df.createOrReplaceTempView("lluvia")
 
 # --- Consulta 1 ---

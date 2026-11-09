@@ -32,3 +32,5 @@ datos-locales/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+.venv-local/
